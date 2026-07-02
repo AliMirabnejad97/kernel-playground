@@ -41,3 +41,5 @@ The module hooks into the Netfilter framework at the **PRE_ROUTING** stage to in
 ```text
 [M2-basic] Example TCP: M2 TCP packet: src_port=40850 dst_port=443 count=3
 [M2-basic] Example UDP: M2 UDP packet: src_port=53229 dst_port=53 count=5
+
+>  **Note:** Detailed deployment instructions and further technical documentation are available in this Google Docs linl: https://docs.google.com/document/d/1bbjC1anoXx9RT56BUEnQDHPDRsvZOmrK6IwoE8OxLrc/edit?usp=sharing
