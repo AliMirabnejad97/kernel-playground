@@ -39,4 +39,5 @@ The module hooks into the Netfilter framework at the **PRE_ROUTING** stage to in
 
 ### Expected Log Blueprint:
 ```text
-[M2-basic] [توضیح کوتاهی از نمونه لاگ خودت بنویس مثلا: Packet=1 Protocol=TCP Port=80 Count=5]
+[M2-basic] Example TCP: M2 TCP packet: src_port=40850 dst_port=443 count=3
+[M2-basic] Example UDP: M2 UDP packet: src_port=53229 dst_port=53 count=5
