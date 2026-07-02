@@ -30,12 +30,20 @@ To ensure full reproducibility, the module was compiled and validated inside the
 The module hooks into the Netfilter framework at the **PRE_ROUTING** stage to inspect packets before they hit the local routing table. 
 
 ### Execution Flow:
-1.  **Validation:** Verifies the integrity of the socket buffer (`skb`).
-2.  **IP Header Inspection:** Extracts the IP header to determine the transport protocol field.
-3.  **Classification:** Separates traffic into TCP or UDP channels.
-4.  **Port Mapping & Counting:** Extracts the source/destination ports and increments the corresponding counter in the tracking arrays.
-5.  **Rate Limiting Check:** Evaluates current counts against threshold limits. If exceeded, it triggers a kernel log alert.
-6.  **Verdict:** Returns `NF_ACCEPT` to allow seamless packet traversal without blocking.
+1. Clone repository
+2. Build Podman image
+3. Setup environment
+4. Run container
+5. Build module
+6. Run virtual machine
+7. Load kernel module
+8. Generate TCP traffic
+9. Show TCP logs
+10. Generate UDP traffic
+11. Show UDP logs
+12. Show TCP/UDP alerts
+13. Remove module
+
 
 ### Expected Log Blueprint:
 ```text
